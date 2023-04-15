@@ -15,11 +15,11 @@ export default function Form() {
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-            .email()
+            .email("That is not a email, please enter it again and dont try to trick us")
             .required("Required"),
         username: Yup.string()
             .required("Required")
-            .max(5, "Too long sucker")
+            .max(5, "The limit is 5 characters, please be nice.")
       })}
     >
       {props => {
