@@ -1,8 +1,10 @@
 import { Formik } from "formik";
 import { DisplayFormikState } from "./DisplayFormikState";
-import Yup from "yup";
+import * as Yup from "yup";
 
 export default function Form() {
+
+    
   return (
     <div>
          <Formik
@@ -11,6 +13,14 @@ export default function Form() {
         await new Promise(resolve => setTimeout(resolve, 500));
         alert(JSON.stringify(values, null, 2));
       }}
+      validationSchema={Yup.object().shape({
+        email: Yup.string()
+            .email()
+            .required("Required"),
+        username: Yup.string()
+            .required("Required")
+            .max(5, "Too long sucker")
+      })}
     >
       {props => {
         const {
