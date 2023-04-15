@@ -1,0 +1,22 @@
+{
+  "name": "first-time-parcel-formik",
+  "version": "1.0.0",
+  "description": "",
+  "source": "/public/index.html",
+  "scripts": {
+    "start": "parcel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "formik": "^2.2.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "yup": "^0.27.0"
+  }
+}
