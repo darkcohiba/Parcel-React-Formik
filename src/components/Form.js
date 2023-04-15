@@ -6,7 +6,7 @@ export default function Form() {
   return (
     <div>
          <Formik
-      initialValues={{ email: "" }}
+      initialValues={{ email: "", username: "" }}
       onSubmit={async values => {
         await new Promise(resolve => setTimeout(resolve, 500));
         alert(JSON.stringify(values, null, 2));
